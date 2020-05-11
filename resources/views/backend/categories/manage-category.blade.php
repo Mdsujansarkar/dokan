@@ -32,7 +32,7 @@
                   <button class="btn btn-outline-primary"><a href="{{route('published-category', ['id'=>$category->id])}}"><i class="fa fa-angle-double-down"></i></a></button>
                   @endif
                    <button class="btn btn-outline-success"><a href="{{route('edit-category', ['id'=>$category->id])}}"><i class="fa fa-edit"></i></a></button>
-                   <button class="btn btn-outline-success"><a href="{{-- {{route('published-category', ['id'=>$category->id])}} --}}"><i class="far fa-trash-alt"></i></a></button>
+                   <button class="btn btn-outline-success"><a href="{{route('delete-category', ['id'=>$category->id])}}"><i class="fa fa-minus-square"></i></a></button>
                 </td>
             </tr>
           @endforeach

@@ -24,20 +24,21 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">Category Name</label>
                     <input type="text" name="add_category" value="{{$category->add_category}}" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="hidden" name="category_id" value="{{$category->id}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Category Icon</label>
-                    <input type="text" name="category_icon" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" name="category_icon" value="{{$category->category_icon}}" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Category Description</label>
-                    <textarea name="category_description" class="form-control" cols="30" rows="10"></textarea>
+                    <textarea name="category_description" class="form-control" cols="30" rows="10">{{$category->category_description}}</textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Publication Status:</label>
-                    <input type="radio" name="publication_status" value="1">
+                    <input type="radio" name="publication_status" {{$category->category_description==1 ? 'checked':''}} value="1">
                     <label for="">Publish</label>
-                    <input type="radio" name="publication_status" value="0">
+                    <input type="radio" name="publication_status" {{$category->category_description==0 ? 'checked':''}} value="0">
                     <label for="">Unpublish</label>
                   </div>
                   <button type="submit" name="btn" class="btn btn-primary" value="submit">update</button>

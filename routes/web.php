@@ -27,3 +27,4 @@ Route::get( '/category/published/{id}',		'CategoryController@categoryPublished' 
 Route::get( '/category/unblished/{id}',		'CategoryController@categoryUnpublished' )	->name( 'published-category' );
 Route::get( '/category/edit/{id}',			'CategoryController@categoryEdit' )			->name( 'edit-category' );
 Route::post('/category/update',				'CategoryController@categoryupdate' )		->name( 'update-category' );
+Route::get('/category/delete/{id}',			'CategoryController@categorydelete' )		->name( 'delete-category' );

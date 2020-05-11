@@ -52,6 +52,20 @@ class CategoryController extends Controller
     }
     public function categoryupdate(Request $request)
     {
-    	
+    	$category 	= Category::find($request->category_id);
+    	$category   ->add_category 			= $request ->add_category;
+    	$category   ->category_icon 		= $request ->category_icon;
+    	$category   ->category_description  = $request ->category_description;
+    	$category   ->publication_status 	= $request ->publication_status;
+    	$category   ->save();
+    	return redirect('/catagory/manage')->with('message','Category Published Successfully');
+    }
+    public function categorydelete($id)
+    {
+    	$category 		= Category::find($id);
+    	$category 		->delete();
+    	return redirect('/catagory/manage')->with('message','Category Published Successfully');
+
+
     }
 }
