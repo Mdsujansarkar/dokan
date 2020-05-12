@@ -27,7 +27,7 @@
                       </a>
             <ul class="sub">
               <li><a class="" href="{{route('addBrand')}}">Add Brand</a></li>
-              <li><a class="" href="buttons.html">Manage Brand</a></li>
+              <li><a class="" href="{{route('manageBrand')}}">Manage Brand</a></li>
             </ul>
           </li>
           <li>

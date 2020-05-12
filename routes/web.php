@@ -27,9 +27,16 @@ Route::get( '/category/published/{id}',		'CategoryController@categoryPublished' 
 Route::get( '/category/unblished/{id}',		'CategoryController@categoryUnpublished' )	->name( 'published-category' );
 Route::get( '/category/edit/{id}',			'CategoryController@categoryEdit' )			->name( 'edit-category' );
 Route::post('/category/update',				'CategoryController@categoryupdate' )		->name( 'update-category' );
-Route::get('/category/delete/{id}',			'CategoryController@categorydelete' )		->name( 'delete-category' );
+Route::get( '/category/delete/{id}',		'CategoryController@categorydelete' )		->name( 'delete-category' );
 /**
  * Add Brand
  */
 Route::get( '/add/brand',					'BrandController@index' )				    ->name( 'addBrand' );
-Route::post( '/add/brand',					'BrandController@brandSave' )				->name( 'new-brand' );
+Route::post('/add/brand',					'BrandController@brandSave' )				->name( 'new-brand' );
+Route::get( '/manage/brand',				'BrandController@manageBrand' )				->name( 'manageBrand' );
+Route::get( '/unpublish/brand/{id}',		'BrandController@unpublishBrand' )			->name( 'unpublished-brand' );
+Route::get( '/publish/brand/{id}',			'BrandController@publishBrand' )			->name( 'published-brand' );
+Route::get( '/edit/brand/{id}',				'BrandController@editBrand' )				->name( 'edit-brand' );
+Route::post('/update/brand',				'BrandController@updateBrand' )				->name( 'update-brand' );
+Route::get( '/delete/brand/{id}',			'BrandController@deleteBrand' )				->name( 'delete-brand' );
+
