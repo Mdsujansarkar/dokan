@@ -17,7 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('add_category');
             $table->string('category_icon');
-            $table->string('category_description');
+            $table->text('category_description');
             $table->tinyInteger('publication_status');
             $table->timestamps();
         });

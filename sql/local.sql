@@ -40,30 +40,33 @@ LOCK TABLES `brands` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `category`
+-- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `category`;
+DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `category` (
+CREATE TABLE `categories` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `add-category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category-icon` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category-description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `add_category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category_icon` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `publication_status` tinyint(4) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `category`
+-- Dumping data for table `categories`
 --
 
-LOCK TABLES `category` WRITE;
-/*!40000 ALTER TABLE `category` DISABLE KEYS */;
-/*!40000 ALTER TABLE `category` ENABLE KEYS */;
+LOCK TABLES `categories` WRITE;
+/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES (2,'Apex','fa fa-facebook','lorem ipsum',1,'2020-05-11 03:19:44','2020-05-11 07:45:48');
+INSERT INTO `categories` VALUES (3,'Fruits and Vegetables','fa fa-facebook','Fruits and Vegetables  Fruits and Vegetables  fe \r\nFruits and Vegetables  Fruits and Vegetables  \r\nFruits and Vegetables  Fruits and Vegetables \r\nFruits and Vegetables  Fruits and Vegetables',1,'2020-05-11 22:18:34','2020-05-11 22:18:34');
+/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -105,7 +108,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -114,10 +117,11 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1);
-INSERT INTO `migrations` VALUES (2,'2019_08_19_000000_create_failed_jobs_table',1);
-INSERT INTO `migrations` VALUES (3,'2020_05_11_042805_create_category_table',2);
-INSERT INTO `migrations` VALUES (4,'2020_05_11_045032_create_brands_table',2);
+INSERT INTO `migrations` VALUES (15,'2020_05_11_042805_create_category_table',1);
+INSERT INTO `migrations` VALUES (18,'2014_10_12_000000_create_users_table',2);
+INSERT INTO `migrations` VALUES (19,'2019_08_19_000000_create_failed_jobs_table',2);
+INSERT INTO `migrations` VALUES (20,'2020_05_11_045032_create_brands_table',2);
+INSERT INTO `migrations` VALUES (21,'2020_05_11_085836_create_categories_table',2);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-11 11:51:48
+-- Dump completed on 2020-05-12 11:19:45

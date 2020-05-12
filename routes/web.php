@@ -28,3 +28,8 @@ Route::get( '/category/unblished/{id}',		'CategoryController@categoryUnpublished
 Route::get( '/category/edit/{id}',			'CategoryController@categoryEdit' )			->name( 'edit-category' );
 Route::post('/category/update',				'CategoryController@categoryupdate' )		->name( 'update-category' );
 Route::get('/category/delete/{id}',			'CategoryController@categorydelete' )		->name( 'delete-category' );
+/**
+ * Add Brand
+ */
+Route::get( '/add/brand',					'BrandController@index' )				    ->name( 'addBrand' );
+Route::post( '/add/brand',					'BrandController@brandSave' )				->name( 'new-brand' );

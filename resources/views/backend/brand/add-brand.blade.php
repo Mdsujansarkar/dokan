@@ -19,21 +19,17 @@
                 {{Session::get('message')}}
               </header>
               <div class="panel-body">
-                <form role="form" method="post" action="{{route('add-category')}}">
+                <form role="form" method="post" action="{{route('new-brand')}}">
                 	@csrf
                   
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Category Name</label>
-                    <input type="text" name="add_category" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">Brand Name</label>
+                    <input type="text" name="add_brand" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Category Icon</label>
-                    <input type="text" name="category_icon" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Category Description</label>
-                    <textarea name="category_description" class="form-control" cols="30" rows="10"></textarea>
+                    <label for="exampleInputPassword1">Brand Description</label>
+                    <textarea name="brand_description" class="form-control" cols="30" rows="10"></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Publication Status:</label>
