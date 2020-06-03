@@ -39,4 +39,10 @@ Route::get( '/publish/brand/{id}',			'BrandController@publishBrand' )			->name( 
 Route::get( '/edit/brand/{id}',				'BrandController@editBrand' )				->name( 'edit-brand' );
 Route::post('/update/brand',				'BrandController@updateBrand' )				->name( 'update-brand' );
 Route::get( '/delete/brand/{id}',			'BrandController@deleteBrand' )				->name( 'delete-brand' );
+/**
+ * Add Product
+ */
+
+Route::get( '/product/add',					'ProductController@index')				    ->name( 'addProduct' );
+Route::post( '/product/add',                'ProductController@saveProductbasicInfo')			->name('save-product' );
 
