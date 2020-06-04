@@ -28,7 +28,7 @@
                 {{Session::get('message')}}
               </header>
               <div class="panel-body">
-                   <form class="form-horizontal" action="{{ route('save-product')}}" method="post" enctype="multipart/form-data">
+                   <form class="form-horizontal" action="{{ route('test.product')}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
                     <!-- Form Name -->
                     <legend>PRODUCTS</legend>
@@ -109,7 +109,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="singlebutton">Product Insert</label>
                                 <div class="col-md-4">
-                                    <button id="singlebutton" name="singlebutton" value="submit" class="btn btn-primary">Product Save</button>
+                                    <button id="singlebutton" name="singlebutton" value="save" class="btn btn-primary">Product Save</button>
                             </div>
                 
             </form>

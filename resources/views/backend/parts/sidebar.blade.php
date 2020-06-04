@@ -38,7 +38,7 @@
                       </a>
             <ul class="sub">
               <li><a class="" href="{{route('addProduct')}}">Add Product</a></li>
-              <li><a class="" href="">Manage Product</a></li>
+              <li><a class="" href="{{ route('manage.product')}}">Manage Product</a></li>
             </ul>
           </li>
 
@@ -49,7 +49,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
+              <li><a class="" href="{{ route('test.pro')}}">Test</a></li>
               <li><a class="" href="login.html"><span>Login Page</span></a></li>
               <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
               <li><a class="" href="blank.html">Blank Page</a></li>

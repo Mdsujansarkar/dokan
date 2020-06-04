@@ -46,14 +46,14 @@ class ProductController extends Controller
 	{
 		$product = new Product();
 
-		$product->category_id          = $request->category_id;
-		$product->brand_id             = $request->brand_id;
-		$product->product_name         = $request->product_name;
-		$product->product_price        = $request->product_price;
+		$product->category_id          		   = $request->category_id;
+		$product->brand_id             		   = $request->brand_id;
+		$product->product_name         		   = $request->product_name;
+		$product->product_price        		   = $request->product_price;
 		$product->product_short_description    = $request->product_short_description;
 		$product->product_long_description     = $request->product_long_description;
-		$product->product_image        = $imageurl;
-		$product->publication_status   = $request->publication_status;
+		$product->product_image        		   = $imageurl;
+		$product->publication_status   		   = $request->publication_status;
 		$product->save();
 	}
 
@@ -66,5 +66,11 @@ class ProductController extends Controller
 		$this->saveProductbasicInfo($request, $imageurl);
 
 		return redirect('/product/add')->with(' message', 'Message save');
+	}
+
+	public function manageProduct()
+	{
+		$products 	  = Product::get();
+		return view('backend.product.edit-product', ['products' => $products]);	
 	}
 }

@@ -137,7 +137,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -154,6 +154,7 @@ INSERT INTO `migrations` VALUES (40,'2019_08_19_000000_create_failed_jobs_table'
 INSERT INTO `migrations` VALUES (41,'2020_05_11_085836_create_categories_table',4);
 INSERT INTO `migrations` VALUES (42,'2020_05_12_122000_create_brands_table',5);
 INSERT INTO `migrations` VALUES (43,'2020_05_17_095648_create_products_table',6);
+INSERT INTO `migrations` VALUES (44,'2020_06_03_194235_create_tests_table',7);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -177,7 +178,7 @@ CREATE TABLE `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -186,7 +187,43 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,'Mobile',3,3,55.00,'creating the directory first where I will put my image file solves the problem for me.','creating the directory first where I will put my image file solves the problem for me.',1,'product-imags/2.jpg','2020-06-03 15:06:37','2020-06-03 15:06:37');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tests`
+--
+
+DROP TABLE IF EXISTS `tests`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `tests` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `product_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `brand_id` int(11) NOT NULL,
+  `product_price` double(10,2) NOT NULL,
+  `product_short_description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_long_description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `publication_status` tinyint(4) NOT NULL,
+  `product_image` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tests`
+--
+
+LOCK TABLES `tests` WRITE;
+/*!40000 ALTER TABLE `tests` DISABLE KEYS */;
+INSERT INTO `tests` VALUES (1,'Mobile',3,3,55.00,'product','product',1,'1591217522product-imags/2.jpg','2020-06-03 14:52:02','2020-06-03 14:52:02');
+INSERT INTO `tests` VALUES (2,'patil',3,4,48.00,'creating the directory first where I will put my image file solves the problem for me.','creating the directory first where I will put my image file solves the problem for me.',1,'product-imags/3.jpg','2020-06-03 14:55:30','2020-06-03 14:55:30');
+INSERT INTO `tests` VALUES (3,'Mobile',3,4,256.00,'creating the directory first where I will put my image file solves the problem for me.','creating the directory first where I will put my image file solves the problem for me.',1,'product-imags/2.jpg','2020-06-03 14:56:00','2020-06-03 14:56:00');
+/*!40000 ALTER TABLE `tests` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -228,4 +265,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-03 17:58:01
+-- Dump completed on 2020-06-04  7:58:14

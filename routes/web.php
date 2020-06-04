@@ -44,5 +44,13 @@ Route::get( '/delete/brand/{id}',			'BrandController@deleteBrand' )				->name( '
  */
 
 Route::get( '/product/add',					'ProductController@index')				    ->name( 'addProduct' );
-Route::post( '/product/add',                'ProductController@saveProductbasicInfo')			->name('save-product' );
+Route::post( '/product/add',                'ProductController@saveProduct')	        ->name('save-product' );
+Route::get('/product/manage',               'ProductController@manageProduct')          ->name('manage.product');
+
+
+
+
+
+Route::get( '/test/add',                    'TestController@index')->name('test.pro');
+Route::post('/test/add',                    'TestController@testSave')->name('test.product');
 
