@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get(	'/',							'HomeController@index' )					->name( 'index' );
+Route::get( '/category/{id}',               'HomeController@singelCategory' )           ->name( 'categorySingel' );
+Route::get( 'single/product/{id}',          'HomeController@singleProCon')              ->name('singleProduct');
 /**
  * Backend Controller
  */
@@ -46,6 +48,10 @@ Route::get( '/delete/brand/{id}',			'BrandController@deleteBrand' )				->name( '
 Route::get( '/product/add',					'ProductController@index')				    ->name( 'addProduct' );
 Route::post( '/product/add',                'ProductController@saveProduct')	        ->name('save-product' );
 Route::get('/product/manage',               'ProductController@manageProduct')          ->name('manage.product');
+Route::get('/unpublished/produc/{id}',      'ProductController@unpublisProduct')        ->name('unpublished.product');
+Route::get('/published/product/{id}',       'ProductController@publisProduct')          ->name('published.product');
+Route::get('/edit/product/{id}',            'ProductController@editProduct')            ->name('edit.product');
+Route::post('update/product',               'ProductController@updateProduct')          ->name('update.product');
 
 
 

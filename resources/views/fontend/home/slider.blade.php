@@ -1,135 +1,56 @@
 	<div class="trending-ads">
 				<div class="container">
 				<!-- slider -->
+
+				<style>
+				.myButton {
+	background-color:#79bbff;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 24px !important;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.myButton:hover {
+
+	background-color:#378de5;
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.myButton:active {
+	position:relative;
+	top:3px;
+}
+
+				</style>
 				<div class="trend-ads">
-					<h2>Trending Ads</h2>
+					<h2>Recent Product</h2>
 							<ul id="flexiselDemo3">
 								<li>
+								@foreach ($newProducts as $newProduct)
 									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p1.jpg"/>
-											<span class="price">&#36; 450</span>
+										<a href="{{route('singleProduct',['id'=>$newProduct->id])}}">
+											<img src="{{asset($newProduct->product_image)}}"/>
+											<span class="price">&#36; {{$newProduct->product_price}}</span>
 										</a> 
 										<div class="ad-info">
-											<h5>There are many variations of passages</h5>
-											<span>1 hour ago</span>
+											<h5>{{$newProduct->product_name}}</h5>
+											<span>Product upload: {{$newProduct->created_at->format('jS F Y')}}</span>
+											
+										</div>
+										<div class="productAdd" />
+										<a class="myButton" href="{{route('singleProduct',['id'=>$newProduct->id])}}" style="margin-left: 10px;">Add To Cart</a>
 										</div>
 									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p2.jpg"/>
-											<span class="price">&#36; 399</span>
-										</a> 
-										<div class="ad-info">
-											<h5>Lorem Ipsum is simply dummy</h5>
-											<span>3 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p3.jpg"/>
-											<span class="price">&#36; 199</span>
-										</a> 
-										<div class="ad-info">
-											<h5>It is a long established fact that a reader</h5>
-											<span>8 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p4.jpg"/>
-											<span class="price">&#36; 159</span>
-										</a> 
-										<div class="ad-info">
-											<h5>passage of Lorem Ipsum you need to be</h5>
-											<span>19 hour ago</span>
-										</div>
-									</div>
+									@endforeach
+									
 								</li>
-								<li>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p5.jpg"/>
-											<span class="price">&#36; 1599</span>
-										</a> 
-										<div class="ad-info">
-											<h5>There are many variations of passages</h5>
-											<span>1 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p6.jpg"/>
-											<span class="price">&#36; 1099</span>
-										</a> 
-										<div class="ad-info">
-											<h5>passage of Lorem Ipsum you need to be</h5>
-											<span>1 day ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p7.jpg"/>
-											<span class="price">&#36; 109</span>
-										</a> 
-										<div class="ad-info">
-											<h5>It is a long established fact that a reader</h5>
-											<span>9 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p8.jpg"/>
-											<span class="price">&#36; 189</span>
-										</a> 
-										<div class="ad-info">
-											<h5>Lorem Ipsum is simply dummy</h5>
-											<span>3 hour ago</span>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p9.jpg"/>
-											<span class="price">&#36; 2599</span>
-										</a> 
-										<div class="ad-info">
-											<h5>Lorem Ipsum is simply dummy</h5>
-											<span>3 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p10.jpg"/>
-											<span class="price">&#36; 3999</span>
-										</a> 
-										<div class="ad-info">
-											<h5>It is a long established fact that a reader</h5>
-											<span>9 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p11.jpg"/>
-											<span class="price">&#36; 2699</span>
-										</a> 
-										<div class="ad-info">
-											<h5>passage of Lorem Ipsum you need to be</h5>
-											<span>1 day ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p12.jpg"/>
-											<span class="price">&#36; 899</span>
-										</a> 
-										<div class="ad-info">
-											<h5>There are many variations of passages</h5>
-											<span>1 hour ago</span>
-										</div>
-									</div>
-								</li>
+							
 						</ul>
 					<script type="text/javascript">
 						 $(window).load(function() {
