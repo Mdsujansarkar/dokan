@@ -16,7 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get(	'/',							'HomeController@index' )					->name( 'index' );
 Route::get( '/category/{id}',               'HomeController@singelCategory' )           ->name( 'categorySingel' );
-Route::get( 'single/product/{id}',          'HomeController@singleProCon')              ->name('singleProduct');
+Route::get( '/single/product/{id}',         'HomeController@singleProCon')              ->name('singleProduct');
+
+
+
+
+Route::post('/product/add/cart',           'CartController@productAddCart')            ->name('add.to.cart');
+Route::get('/product/add/cart',             'CartController@productAddShow')            ->name('add.to.show');
 /**
  * Backend Controller
  */

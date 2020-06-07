@@ -6,7 +6,7 @@
 			<div class="header-right">
 			<a class="account" href="login.html" style="margin-left: 10px;">My Account</a>
 			<a class="account" href="login.html" style="margin-left: 10px;">My Account</a>
-			<a class="account" href="login.html" style="margin-left: 10px;">My Account</a>
+			<a class="account" href="{{route('add.to.show')}}" style="margin-left: 10px;">cart</a>
 			
 		</div>
 		</div>

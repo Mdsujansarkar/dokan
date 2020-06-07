@@ -187,8 +187,8 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Mobile',3,3,55.00,'creating the directory first where I will put my image file solves the problem for me.','creating the directory first where I will put my image file solves the problem for me.',0,'product-imags/2.jpg','2020-06-03 15:06:37','2020-06-04 17:07:21');
-INSERT INTO `products` VALUES (2,'another',3,4,66.00,'ag defines a','ag defines a multi-line',0,'product-imags/5.jpg','2020-06-04 17:10:21','2020-06-05 00:53:27');
+INSERT INTO `products` VALUES (1,'Mobile',3,3,55.00,'creating the directory first where I will put my image file solves the problem for me.','creating the directory first where I will put my image file solves the problem for me.',1,'product-imags/2.jpg','2020-06-03 15:06:37','2020-06-06 18:24:01');
+INSERT INTO `products` VALUES (2,'another',3,4,66.00,'ag defines a','ag defines a multi-line',1,'product-imags/5.jpg','2020-06-04 17:10:21','2020-06-06 18:24:06');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -266,4 +266,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-07  4:04:19
+-- Dump completed on 2020-06-07 20:01:32

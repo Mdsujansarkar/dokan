@@ -35,4 +35,15 @@ class HomeController extends Controller
         ]);
 
     }
+    public function singleProCon($id)
+    {
+        $singelProduct      = Product::find($id);
+        return view('fontend.product.singleProduct', [
+            'singelProduct'  => $singelProduct
+        ]);
+    }
+    public function productAddCart()
+    {
+        
+    }
 }
