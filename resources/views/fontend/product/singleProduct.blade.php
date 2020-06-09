@@ -62,7 +62,5 @@
 			</div>
 		</div>
 	</div>
-		
-		{{-- @include('fontend.home.slider') --}}
 		</div>
 @endsection

@@ -28,7 +28,19 @@ class CartController extends Controller
     }
     public function productAddShow()
     {
-        $cartCollection = Cart::content();
-        return view('fontend.cart.cart',['cartCollection'=> $cartCollection]);
+        $cartCollections = Cart::content();
+        return view('fontend.cart.cart',['cartCollections'=> $cartCollections]);
+    }
+
+    public function cartUpdateShow(Request $request)
+    {
+        Cart::update($request->rowId, $request->qty);
+        return redirect('/product/add/cart');
+    }
+
+    public function productDelete($id)
+    {
+        Cart::remove($id);
+        return redirect('/product/add/cart');
     }
 }
