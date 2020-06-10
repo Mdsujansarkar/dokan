@@ -18,26 +18,22 @@
 								<p><a href="#">Click Here</a> </p>
 								<div class="clearfix"> </div>
 							</div>
-							<form>
+							<form action="{{route('custom.login')}}" method="post">
+								@csrf
 							<div class="log-input">
 								<div class="log-input-left">
-								   <input type="text" class="user" value="Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Email';}"/>
+								   <input type="text" class="user" name="email_address" value="Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Email';}"/>
 								</div>
-								<span class="checkbox2">
-									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
-								</span>
+								
 								<div class="clearfix"> </div>
 							</div>
 							<div class="log-input">
 								<div class="log-input-left">
-								   <input type="password" class="lock" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
+								   <input type="password" class="lock" name="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
 								</div>
-								<span class="checkbox2">
-									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
-								</span>
 								<div class="clearfix"> </div>
 							</div>
-							<input type="submit" value="Log in">
+							<input type="submit" name="btn" value="Log in">
 						</form>	 
 						</div>
 						<div class="new_people">

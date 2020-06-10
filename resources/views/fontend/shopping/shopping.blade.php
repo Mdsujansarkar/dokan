@@ -21,7 +21,7 @@
 								<h4>First Name :</h4>
 							</div>
 							<div class="sign-up2">
-									<input type="text" name="first_name" placeholder="Enter Your First Name" required=" "/>
+									<input type="text" name="first_name" value="{{$customerId->first_name}}" required=" "/>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -30,7 +30,7 @@
 								<h4>Last Name :</h4>
 							</div>
 							<div class="sign-up2">
-									<input type="text" name="last_name" placeholder="Enter Your Last Name" required=" "/>
+									<input type="text" name="last_name" value="{{$customerId->last_name}}" required=" "/>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -39,7 +39,7 @@
 								<h4>Phone Number* :</h4>
 							</div>
 							<div class="sign-up2">
-									<input type="text" name="phone_number" placeholder="Enter Your Phone Number" required=" "/>
+									<input type="text" name="phone_number" value="{{$customerId->phone_number}}" required=" "/>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -48,38 +48,28 @@
 								<h4>Email Address* :</h4>
 							</div>
 							<div class="sign-up2">
-									<input type="text" name="email_address" placeholder="Enter Your Email Address" required=" "/>
+									<input type="text" name="email_address" value="{{$customerId->email_address}}" required=" "/>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
-						<div class="sign-u">
-							<div class="sign-up1">
-								<h4>Password* :</h4>
-							</div>
-							<div class="sign-up2">
-									<input type="password" name="password" placeholder="Enter Your Password" required=" "/>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
+						
 						<div class="sign-u">
 							<div class="sign-up1">
 								<h4>textarea* :</h4>
 							</div>
 							<div class="sign-up2">
-									<textarea rows="8" cols="63" name="message" placeholder="Message"></textarea>
+									<textarea rows="8" cols="63" name="message" >{{$customerId->message}}</textarea>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
 						
 						<div class="sub_home">
 							<div class="sub_home_left">
-									<input type="submit" name="btn" value="Register">
+									<input type="submit" name="btn" value="Billing Address">
 							</div>
 							<div class="clearfix"> </div>
 						</div>
-						<div class="new_people">
-							<a href="{{route('customer.login')}}">Login</a>
-						</div>
+						
 					</div>
 				</div>
 			</div>

@@ -16,20 +16,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get(	'/',							'HomeController@homePage' )					->name( 'index' );
 Route::get( '/category/{id}',               'HomeController@singelCategory' )           ->name( 'categorySingel' );
-Route::get( '/single/product/{id}',         'HomeController@singleProCon')              ->name('singleProduct');
+Route::get( '/single/product/{id}',         'HomeController@singleProCon')              ->name( 'singleProduct' );
 
 
 
 
-Route::post('/product/add/cart',           'CartController@productAddCart')            ->name('add.to.cart');
-Route::get('/product/add/cart',            'CartController@productAddShow')            ->name('add.to.show');
-Route::post('/product/update',             'CartController@cartUpdateShow')            ->name('cart.update');
-Route::get('/product/add/cart/{rowId}',    'CartController@productDelete')             ->name('delete-cart-item');
+Route::post('/product/add/cart',           'CartController@productAddCart')            ->name( 'add.to.cart' );
+Route::get('/product/add/cart',            'CartController@productAddShow')            ->name( 'add.to.show' );
+Route::post('/product/update',             'CartController@cartUpdateShow')            ->name( 'cart.update' );
+Route::get('/product/add/cart/{rowId}',    'CartController@productDelete')             ->name( 'delete-cart-item' );
 
 
 
-Route::get('/customer/registration',       'CustomerRegistration@registrationCustomer')->name('registration.shopping');
-Route::get('/customer/login',              'CustomerRegistration@loginCustomer')       ->name('customer.login');
+
 /**
  * Backend Controller
  */
@@ -43,6 +42,17 @@ Route::get( '/category/unblished/{id}',		'CategoryController@categoryUnpublished
 Route::get( '/category/edit/{id}',			'CategoryController@categoryEdit' )			->name( 'edit-category' );
 Route::post('/category/update',				'CategoryController@categoryupdate' )		->name( 'update-category' );
 Route::get( '/category/delete/{id}',		'CategoryController@categorydelete' )		->name( 'delete-category' );
+
+Route::get( '/customer/checkout',           'CustomerRegistration@index')               ->name( 'customer.shopping' );
+Route::post('/customer/checkout',           'CustomerRegistration@customerSignUp')      ->name( 'customer.shopping');
+Route::get('/customer/registration',       'CustomerRegistration@registrationCustomer')->name( 'registration.shopping' );
+Route::get('/customer/login',              'CustomerRegistration@loginCustomer')       ->name( 'customer.login' );
+Route::post('/customer/login',             'CustomerRegistration@customLogin')         ->name( 'custom.login' );
+
+
+
+
+
 /**
  * Add Brand
  */
