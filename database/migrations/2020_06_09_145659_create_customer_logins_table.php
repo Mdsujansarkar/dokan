@@ -14,7 +14,13 @@ class CreateCustomerLoginsTable extends Migration
     public function up()
     {
         Schema::create('customer_logins', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('first-name');
+            $table->string('last-name');
+            $table->string('phone-number');
+            $table->string('email-address');
+            $table->string('password');
+            $table->text('message');
             $table->timestamps();
         });
     }

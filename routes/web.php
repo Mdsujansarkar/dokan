@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get(	'/',							'HomeController@index' )					->name( 'index' );
+Route::get(	'/',							'HomeController@homePage' )					->name( 'index' );
 Route::get( '/category/{id}',               'HomeController@singelCategory' )           ->name( 'categorySingel' );
 Route::get( '/single/product/{id}',         'HomeController@singleProCon')              ->name('singleProduct');
 
@@ -73,3 +73,7 @@ Route::post('update/product',               'ProductController@updateProduct')  
 Route::get( '/test/add',                    'TestController@index')->name('test.pro');
 Route::post('/test/add',                    'TestController@testSave')->name('test.product');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

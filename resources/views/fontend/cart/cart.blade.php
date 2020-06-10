@@ -51,7 +51,7 @@
 			<div class="clearfix"></div>
             <div class="col-md-6">
                 <div class="panel panel-default" style="background-color:#337AB7;padding:15px">
-                <div class="panel-body" style="color:#FFF;">A Basic Panel</div>
+                <div class="panel-body" style="color:#FFF;">Cart Info</div>
 
             </div>
              <table class="table table-bordered">
@@ -75,7 +75,7 @@
             </div>
             <div class="col-md-6">
                 <div class="panel panel-default" >
-                <div class="panel-body"style="background-color:green;padding:15px">A Basic Panel</div>
+                <div class="panel-body"style="background-color:#337AB7;padding:15px;color:#fff">Contunue shopping</div>
                 <table class="table table-bordered">
                     <tbody>
                        
