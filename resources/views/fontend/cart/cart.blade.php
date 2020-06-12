@@ -67,9 +67,11 @@
                             </tr>
                             <tr>
                             <th scope="row">Total</th>
-                            <td>Taka. {{$vat +$sum}} /=</td>
+                            <td>Taka. {{$orderTotal = $vat +$sum}} /=</td>
                             </tr>
-                          
+                           <?php 
+                            Session::put('orderTotal', $orderTotal);
+                        ?>
                         </tbody>
                 </table>
             </div>

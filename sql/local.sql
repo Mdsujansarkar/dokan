@@ -63,7 +63,7 @@ CREATE TABLE `brands` (
 
 LOCK TABLES `brands` WRITE;
 /*!40000 ALTER TABLE `brands` DISABLE KEYS */;
-INSERT INTO `brands` VALUES (1,'lasa','রাজার সেটা ঠিক আছে।  কিন্তু জীবনটা তাদের গরীব প্রজার আর যে রাজপ্রাসাদে বসবাস করছেন সেটা এখন আস্ত ধ্বংসস্তুপ।  বলছিলাম, বারো ভূইয়াদের প্রধান ঈসা খাঁর ১৫তম বংশধর দেওয়ান জামাল দাদ খাঁর পরিবারের কথা।  কোনোমতে খেয়েপরে',1,'2020-06-09 19:56:18','2020-06-09 19:56:18');
+INSERT INTO `brands` VALUES (1,'lasa','1234k Avenue, 4th block, New York City.\r\ninfo@example.com\r\n+1234 567 567',1,'2020-06-10 06:20:47','2020-06-10 06:20:47');
 /*!40000 ALTER TABLE `brands` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,7 +92,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Bata','fa fa-facebook','রাজার সেটা ঠিক আছে।  কিন্তু জীবনটা তাদের গরীব প্রজার আর যে রাজপ্রাসাদে বসবাস করছেন সেটা এখন আস্ত ধ্বংসস্তুপ।  বলছিলাম, বারো ভূইয়াদের প্রধান ঈসা খাঁর ১৫তম বংশধর দেওয়ান জামাল দাদ খাঁর পরিবারের কথা।  কোনোমতে খেয়েপরে',1,'2020-06-09 19:56:47','2020-06-09 19:56:47');
+INSERT INTO `categories` VALUES (1,'Computer','fa fa-facebook','1234k Avenue, 4th block, New York City.\r\ninfo@example.com\r\n+1234 567 567',1,'2020-06-10 06:20:36','2020-06-10 06:20:36');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,16 +105,16 @@ DROP TABLE IF EXISTS `customer_logins`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `customer_logins` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `first-name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `last-name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone-number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email-address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone_number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,6 +123,12 @@ CREATE TABLE `customer_logins` (
 
 LOCK TABLES `customer_logins` WRITE;
 /*!40000 ALTER TABLE `customer_logins` DISABLE KEYS */;
+INSERT INTO `customer_logins` VALUES (1,'hgfhgf','dsfds','7979787','asdf@rfdg.tgjhg','$2y$10$UAb49sZyIvMGYWXm0lTuq.xX/TIvNrzJSVoUPos.BE86CWu6f5q4m','jh','2020-06-10 06:22:23','2020-06-10 06:22:23');
+INSERT INTO `customer_logins` VALUES (2,'fdsfd','fgfdfgf','35353','liton123sarkar@gmail.com','$2y$10$LeEaQBaHGVKUDliAXFJQYuH82VniHzEEMbrIT8PLUixnerchsawj2','liton123sarkar@gmail.com','2020-06-10 15:22:42','2020-06-10 15:22:42');
+INSERT INTO `customer_logins` VALUES (3,'fdsfd','fgfdfgf','35353','liton123sarkar@gmail.com','$2y$10$PvJ03KrgB10RKkxiElN1Luihw8PYMZuU8TurloCVODNsDPTH3AvyW','liton123sarkar@gmail.com','2020-06-11 00:28:04','2020-06-11 00:28:04');
+INSERT INTO `customer_logins` VALUES (4,'fdsfd','fgfdfgf','35353','liton123sarkar@gmail.com','$2y$10$.R0AjtQax0Z1MPtszO5qR.rouGXveXi8h9LvcT9.72bQ0Oftgj0Em','liton123sarkar@gmail.com','2020-06-11 00:28:09','2020-06-11 00:28:09');
+INSERT INTO `customer_logins` VALUES (5,'fdsfd','fgfdfgf','35353','liton123sarkar@gmail.com','$2y$10$w9.ajb.0sHRVJd34H2g76e2MYRd6Q2oi.n20l.G03Y/oLwFJ0PTli','liton123sarkar@gmail.com','2020-06-11 00:36:10','2020-06-11 00:36:10');
+INSERT INTO `customer_logins` VALUES (6,'cd','adfasd','dsfsda','fdsf@fd.com','$2y$10$koUDOO9LNlHBinayPVY7nOcpwo8Qkvc995CwUX9nVqjyP0FUBNr7a','hgfhfg','2020-06-11 05:41:37','2020-06-11 05:41:37');
 /*!40000 ALTER TABLE `customer_logins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,7 +171,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -177,14 +183,15 @@ LOCK TABLES `migrations` WRITE;
 INSERT INTO `migrations` VALUES (15,'2020_05_11_042805_create_category_table',1);
 INSERT INTO `migrations` VALUES (25,'2020_05_11_045032_create_brands_table',2);
 INSERT INTO `migrations` VALUES (35,'2020_05_12_114116_create_brand_table',3);
-INSERT INTO `migrations` VALUES (46,'2014_10_12_000000_create_users_table',4);
-INSERT INTO `migrations` VALUES (47,'2014_10_12_100000_create_password_resets_table',4);
-INSERT INTO `migrations` VALUES (48,'2019_08_19_000000_create_failed_jobs_table',4);
-INSERT INTO `migrations` VALUES (49,'2020_05_11_085836_create_categories_table',4);
-INSERT INTO `migrations` VALUES (50,'2020_05_12_122000_create_brands_table',4);
-INSERT INTO `migrations` VALUES (51,'2020_05_17_095648_create_products_table',4);
-INSERT INTO `migrations` VALUES (52,'2020_06_03_194235_create_tests_table',4);
-INSERT INTO `migrations` VALUES (53,'2020_06_09_145659_create_customer_logins_table',4);
+INSERT INTO `migrations` VALUES (62,'2014_10_12_000000_create_users_table',4);
+INSERT INTO `migrations` VALUES (63,'2014_10_12_100000_create_password_resets_table',4);
+INSERT INTO `migrations` VALUES (64,'2019_08_19_000000_create_failed_jobs_table',4);
+INSERT INTO `migrations` VALUES (65,'2020_05_11_085836_create_categories_table',4);
+INSERT INTO `migrations` VALUES (66,'2020_05_12_122000_create_brands_table',4);
+INSERT INTO `migrations` VALUES (67,'2020_05_17_095648_create_products_table',4);
+INSERT INTO `migrations` VALUES (68,'2020_06_03_194235_create_tests_table',4);
+INSERT INTO `migrations` VALUES (69,'2020_06_09_145659_create_customer_logins_table',4);
+INSERT INTO `migrations` VALUES (70,'2020_06_11_002622_create_shoppings_table',5);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,7 +239,7 @@ CREATE TABLE `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -241,9 +248,38 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Mobile',1,1,655.00,'রাজার সেটা ঠিক আছে।  কিন্তু জীবনটা তাদের গরীব প্রজার আর যে রাজপ্রাসাদে বসবাস করছেন সেটা এখন আস্ত ধ্বংসস্তুপ।  বলছিলাম, বারো ভূইয়াদের প্রধান ঈসা খাঁর ১৫তম বংশধর দেওয়ান জামাল দাদ খাঁর পরিবারের কথা।  কোনোমতে খেয়েপরে','রাজার সেটা ঠিক আছে।  কিন্তু জীবনটা তাদের গরীব প্রজার আর যে রাজপ্রাসাদে বসবাস করছেন সেটা এখন আস্ত ধ্বংসস্তুপ।  বলছিলাম, বারো ভূইয়াদের প্রধান ঈসা খাঁর ১৫তম বংশধর দেওয়ান জামাল দাদ খাঁর পরিবারের কথা।  কোনোমতে খেয়েপরে',1,'product-imags/2.jpg','2020-06-09 19:57:19','2020-06-09 19:57:19');
-INSERT INTO `products` VALUES (2,'jama',1,1,56.00,'রাজার সেটা ঠিক আছে।  কিন্তু জীবনটা তাদের গরীব প্রজার আর যে রাজপ্রাসাদে বসবাস করছেন সেটা এখন আস্ত ধ্বংসস্তুপ।  বলছিলাম, বারো ভূইয়াদের প্রধান ঈসা খাঁর ১৫তম বংশধর দেওয়ান জামাল দাদ খাঁর পরিবারের কথা।  কোনোমতে খেয়েপরে','রাজার সেটা ঠিক আছে।  কিন্তু জীবনটা তাদের গরীব প্রজার আর যে রাজপ্রাসাদে বসবাস করছেন সেটা এখন আস্ত ধ্বংসস্তুপ।  বলছিলাম, বারো ভূইয়াদের প্রধান ঈসা খাঁর ১৫তম বংশধর দেওয়ান জামাল দাদ খাঁর পরিবারের কথা।  কোনোমতে খেয়েপরে',1,'product-imags/3.jpg','2020-06-09 19:57:52','2020-06-09 19:57:52');
+INSERT INTO `products` VALUES (1,'Mobile',1,1,655.00,'1234k Avenue, 4th block, New York City.\r\ninfo@example.com\r\n+1234 567 567','1234k Avenue, 4th block, New York City.\r\ninfo@example.com\r\n+1234 567 567',1,'product-imags/2.jpg','2020-06-10 06:21:27','2020-06-10 06:21:27');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shoppings`
+--
+
+DROP TABLE IF EXISTS `shoppings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `shoppings` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone_number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shoppings`
+--
+
+LOCK TABLES `shoppings` WRITE;
+/*!40000 ALTER TABLE `shoppings` DISABLE KEYS */;
+INSERT INTO `shoppings` VALUES (1,'cd','adfasd','dsfsda','fdsf@fd.com','hgfhfg','2020-06-11 06:03:01','2020-06-11 06:03:01');
+/*!40000 ALTER TABLE `shoppings` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -305,7 +341,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Sujan Miya','liton123sarkar@gmail.com',NULL,'$2y$10$l4zW9Ecrxmw8ozgkmz5z7edAInNjtDDuAWtRXPN6u/PJCTuuE5o9y',NULL,'2020-06-09 20:03:14','2020-06-09 20:03:14');
+INSERT INTO `users` VALUES (1,'liton123sarkar@gmail.com','liton123sarkar@gmail.com',NULL,'$2y$10$bSLTN887EQ8Vwx9z18QPxuOARzmDVpQl6I3nItSQo.JGhDDgwo30.',NULL,'2020-06-10 06:19:31','2020-06-10 06:19:31');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -318,4 +354,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-10 11:30:54
+-- Dump completed on 2020-06-11 19:58:12

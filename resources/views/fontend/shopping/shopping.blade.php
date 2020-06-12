@@ -13,8 +13,8 @@
 						<h1>Create an account</h1>
 						<p class="creating">Having hands on experience in creating innovative designs,I do offer design 
 							solutions which harness.</p>
-						<h2>Personal Information</h2>
-						<form action="{{route('customer.shopping')}}" method="post">
+						<h2><h2>{{ Session::get('customerName')}}</h2></h2>
+						<form action="{{route('customer.billing.address')}}" method="post">
 						@csrf
 						<div class="sign-u">
 							<div class="sign-up1">

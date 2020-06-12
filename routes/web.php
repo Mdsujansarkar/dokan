@@ -27,8 +27,12 @@ Route::post('/product/update',             'CartController@cartUpdateShow')     
 Route::get('/product/add/cart/{rowId}',    'CartController@productDelete')             ->name( 'delete-cart-item' );
 
 
-
-
+/**
+ * Billing Address
+ */
+Route::post('/billing/adress/save',			'shoppingController@saveCustomerInfo')		->name('customer.billing.address');
+Route::get('/billing/adress/save',			'shoppingController@index')					->name('customer.billing.address');
+Route::post('/payment/options',				'shoppingController@paymentConfarm')		->name('payments.confarm');
 /**
  * Backend Controller
  */
@@ -45,9 +49,9 @@ Route::get( '/category/delete/{id}',		'CategoryController@categorydelete' )		->n
 
 Route::get( '/customer/checkout',           'CustomerRegistration@index')               ->name( 'customer.shopping' );
 Route::post('/customer/checkout',           'CustomerRegistration@customerSignUp')      ->name( 'customer.shopping');
-Route::get('/customer/registration',       'CustomerRegistration@registrationCustomer')->name( 'registration.shopping' );
-Route::get('/customer/login',              'CustomerRegistration@loginCustomer')       ->name( 'customer.login' );
-Route::post('/customer/login',             'CustomerRegistration@customLogin')         ->name( 'custom.login' );
+Route::get('/customer/registration',        'CustomerRegistration@registrationCustomer')->name( 'registration.shopping' );
+Route::get('/customer/login',               'CustomerRegistration@loginCustomer')       ->name( 'customer.login' );
+Route::post('/customer/login',              'CustomerRegistration@customLogin')         ->name( 'custom.login' );
 
 
 
